@@ -11,7 +11,11 @@ This application allows users to:
 - Retrieve and display media files in the frontend via API calls.
 
 ### 🎥 Demo
-[Watch the demo](demo.mp4)
+
+[![Demo Preview](demo-thumbnail.png)](demo.mp4)
+
+Web application demo showing the file upload workflow and resulting gallery. In a browser window a user cursor clicks an upload control, a progress indicator appears, and a new media thumbnail is added to a gallery grid. Visible interface elements include an upload button, thumbnail grid, and filenames or metadata near thumbnails. The environment is a desktop browser running a local development demo. Tone is neutral and functional, demonstrating successful upload and immediate display.
+
 
 
 
