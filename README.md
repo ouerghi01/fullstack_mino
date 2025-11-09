@@ -12,9 +12,8 @@ This application allows users to:
 
 ### 🎥 Demo
 
-[![Watch the video](image.png)](demo.mp4)
+![Web application demo showing the file upload workflow and resulting gallery. In a browser window a user cursor clicks an upload control, a progress indicator appears, and a new media thumbnail is added to a gallery grid. Visible interface elements include an upload button, thumbnail grid, and filenames or metadata near thumbnails. The environment is a desktop browser running a local development demo. Tone is neutral and functional, demonstrating successful upload and immediate display.](demo.gif)
 
-Web application demo showing the file upload workflow and resulting gallery. In a browser window a user cursor clicks an upload control, a progress indicator appears, and a new media thumbnail is added to a gallery grid. Visible interface elements include an upload button, thumbnail grid, and filenames or metadata near thumbnails. The environment is a desktop browser running a local development demo. Tone is neutral and functional, demonstrating successful upload and immediate display.
 
 
 
