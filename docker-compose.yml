@@ -1,0 +1,74 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres_chat
+    restart: always
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    ports:
+      - "5433:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  minio1:
+    image: minio/minio
+    container_name: minio1
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - data1:/data
+    ports:
+      - "9002:9000"
+      - "9005:9001"
+    networks:
+      - app-network
+
+  spring:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: spring_storage_app
+    depends_on:
+      - postgres
+      - minio1   # ✅ fixed: should depend on MinIO
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/mydb
+      SPRING_DATASOURCE_USERNAME: myuser
+      SPRING_DATASOURCE_PASSWORD: mypassword
+      MINIO_URL: http://minio1:9000
+      MINIO_ACCESS_KEY: minioadmin
+      MINIO_SECRET_KEY: minioadmin
+      MINIO_BUCKET_NAME: storage-exp
+    ports:
+      - "8080:4041"
+    restart: always
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: angular_frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - spring
+    networks:
+      - app-network
+
+volumes:
+  pg_data:
+  data1:
+
+networks:
+  app-network:
+    driver: bridge
