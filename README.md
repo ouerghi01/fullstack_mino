@@ -11,10 +11,8 @@ This application allows users to:
 - Retrieve and display media files in the frontend via API calls.
 
 ### 🎥 Demo
-<video controls width="600">
-  <source src="demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Watch the demo](demo.mp4)
+
 
 
 ## 🔹 Architecture
