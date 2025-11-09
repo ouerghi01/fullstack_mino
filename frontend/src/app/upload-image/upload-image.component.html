@@ -1,0 +1,15 @@
+<div class="upload-container">
+  <h2>Upload Image</h2>
+
+  <input type="file" (change)="onFileSelected($event)" accept="image/*">
+  <button (click)="uploadImage()" [disabled]="loading">Upload</button>
+
+  <p *ngIf="message">{{ message }}</p>
+
+  <h3>Uploaded Images</h3>
+  <div class="gallery">
+    <div *ngFor="let media of medias" class="image-card">
+      <img [src]="media.urlFile" [alt]="'Image ' + media.id">
+    </div>
+  </div>
+</div>
