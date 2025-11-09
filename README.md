@@ -11,11 +11,10 @@ This application allows users to:
 - Retrieve and display media files in the frontend via API calls.
 
 ### 🎥 Demo
-(Add a short GIF or video here showing the application in action: uploading a file and seeing it appear in the gallery.)
-
-![Web application demo showing the file upload workflow and resulting gallery. In a browser window a user cursor clicks an upload control, a progress indicator appears, and a new media thumbnail is added to a gallery grid. Visible interface elements include an upload button, thumbnail grid, and filenames or metadata near thumbnails. The environment is a desktop browser running a local development demo. Tone is neutral and functional, demonstrating successful upload and immediate display.](arch.png)
+![Web application demo showing the file upload workflow and resulting gallery. In a browser window a user cursor clicks an upload control, a progress indicator appears, and a new media thumbnail is added to a gallery grid. Visible interface elements include an upload button, thumbnail grid, and filenames or metadata near thumbnails. The environment is a desktop browser running a local development demo. Tone is neutral and functional, demonstrating successful upload and immediate display.](demo.mp4)
 
 ## 🔹 Architecture
+![Web application demo showing the file upload workflow and resulting gallery. In a browser window a user cursor clicks an upload control, a progress indicator appears, and a new media thumbnail is added to a gallery grid. Visible interface elements include an upload button, thumbnail grid, and filenames or metadata near thumbnails. The environment is a desktop browser running a local development demo. Tone is neutral and functional, demonstrating successful upload and immediate display.](arch.png)
 
 Frontend <--> NGINX <--> Backend <--> [PostgreSQL, MinIO]
 
@@ -76,7 +75,7 @@ String url_file = ServletUriComponentsBuilder
 
 3. Access the frontend in your browser:
      ```
-     http://localhost:3000
+     http://localhost:4200
      ```
 
 Use the application to upload files and view stored media.
@@ -96,12 +95,7 @@ fullstack_mino/
 ├─ nginx.conf       # NGINX configuration
 ```
 
-## 🔹 Why Recruiters Will Like This
-- Demonstrates fullstack knowledge: frontend, backend, database, and storage.
-- Shows ability to integrate multiple technologies.
-- Dockerized for easy deployment and scalability.
-- Clear and professional architecture design.
-- Practical use case for media/file storage, common in real-world apps.
+
 
 ## 🔹 Author
 **Mohamed Aziz Ouerghi**  
