@@ -70,7 +70,6 @@ String url_file = ServletUriComponentsBuilder
      git clone [https://github.com/ouerghi01/fullstack_mino.git](https://github.com/ouerghi01/fullstack_mino.git)
      cd fullstack_mino
      ```
-     (Note: This URL is based on your profile. Update it if the repo is elsewhere.)
      
 2. Build and start all services using Docker Compose:
      ```bash
